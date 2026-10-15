@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosa direbbe Maicol Banoffe?</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 10vh;
+            background-color: #f9f9fb;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.2s, transform 0.1s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #e55b4f;
+        }
+        button:active {
+            transform: translateY(2px);
+        }
+        #risultato {
+            margin-top: 40px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            font-style: italic;
+            color: #007b5e;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cosa direbbe Maicol Banoffe?</h1>
+    <button onclick="generaFrase()">Scoprilo</button>
+    
+    <!-- Qui apparirà la frase generata -->
+    <p id="risultato"></p>
+
+    <script>
+        // LISTA DELLE FRASI
+        // Puoi aggiungere quante frasi vuoi qui sotto. 
+        // Ricordati di metterle tra virgolette e separate da una virgola!
+        const frasi = [
+            "Questa è la prima frase di esempio.",
+            "Ecco un'altra cosa che potrebbe dire.",
+            "Maicol colpisce ancora!",
+            "Inserisci qui una nuova frase.",
+            "E un'altra ancora!"
+        ];
+
+        function generaFrase() {
+            // Sceglie un numero casuale basato sulla lunghezza della lista
+            const indiceCasuale = Math.floor(Math.random() * frasi.length);
+            // Mostra la frase corrispondente a quel numero
+            document.getElementById('risultato').innerText = "\"" + frasi[indiceCasuale] + "\"";
+        }
+    </script>
+
+</body>
+</html>
